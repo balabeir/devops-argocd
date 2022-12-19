@@ -14,14 +14,14 @@ spec:
         app: api
     spec:
       containers:
-      - name: pun-api
-        image: ghcr.io/aorjoa-training/devops-go-example:1b719f744d2ca0ec3855f982d68ff59800aea844
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
-        env:
-        - name: PORT
-          valueFrom:
-            configMapKeyRef:
-              name: app-config
-              key: api.service.port
+        - name: pun-api
+          image: ghcr.io/balabeir/devops-go-example:c24667741a1a9a0cc196defd191729fa68072c59
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: api.service.port
